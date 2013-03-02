@@ -8,7 +8,7 @@ Plugin.create :anti_full_width do
   filter_show_filter do |msgs|
     [
       msgs.map do |m|
-        m[:message] = m[:message].gsub(/[０-９][Ａ-ｚ]/u, table)
+        m[:message] = m[:message].gsub(/[０-９Ａ-ｚ]/u, table)
         m
       end
     ]
