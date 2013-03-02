@@ -9,7 +9,7 @@ Plugin.create :anti_full_width do
     [
      msgs.map do |m|
        if m
-         m[:message] = m[:message].gsub(/[０-９Ａ-ｚ]/u, table)
+         m[:message] = m[:message].gsub(/[#{fulls.join}]/u, table)
        end
        m
      end
